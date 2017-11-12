@@ -19,5 +19,7 @@ from bbobkki_app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^lotto/$', views.index, name='lotto'),
+    url(r'^$', views.index, name='index'),
+    url(r'^lotto_new/$', views.post, name='new_lotto'),
+    url(r'^lotto/(?P<pk>[0-9]+)/detail/$', views.detail, name='lotto_detail'),
 ]
